@@ -6,7 +6,7 @@ from datetime import datetime
 from itertools import count
 from urllib.request import Request, urlopen
 
-import pandas as pd
+# import pandas as pd
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
@@ -151,8 +151,8 @@ def crawling_goobne():
     wd.quit()
 
     # 저장
-    table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gugun'])
-    table.to_csv('__results__/goobne.csv', encoding='utf-8', mode='w', index=True)
+    # table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gugun'])
+    # table.to_csv('__results__/goobne.csv', encoding='utf-8', mode='w', index=True)
 
 
 if __name__ == '__main__':
