@@ -39,8 +39,8 @@ def crawling_pelicana():
             results.append((name, address) + tuple(sidogu))
 
     # store
-    table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gugun'])
-    table.to_csv('__results__/pelicana.csv', encoding="utf-8", mode='w', index=True)
+    # table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gugun'])
+    # table.to_csv('__results__/pelicana.csv', encoding="utf-8", mode='w', index=True)
 
 
 def crawling_nene():
@@ -75,9 +75,8 @@ def crawling_nene():
             results.append((name, address) + tuple(sidogu))
 
     # store
-    table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gugun'])
-
-    table.to_csv('/root/crawling-results/nene.csv', encoding="utf-8", mode='w', index=True)
+    # table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gugun'])
+    # table.to_csv('/root/crawling-results/nene.csv', encoding="utf-8", mode='w', index=True)
 
 
 def crawling_kyochon():
@@ -106,8 +105,8 @@ def crawling_kyochon():
         print(t)
 
     # 저장
-    table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gugun'])
-    table.to_csv('__results__/kyochon.csv', encoding='utf-8', mode='w', index=True)
+    # table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gugun'])
+    # table.to_csv('__results__/kyochon.csv', encoding='utf-8', mode='w', index=True)
 
 
 def crawling_goobne():
