@@ -1,3 +1,4 @@
+import os
 import ssl
 import sys
 import time
@@ -10,6 +11,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 
 from collection import crawler
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 def crawling_pelicana():
@@ -74,7 +76,8 @@ def crawling_nene():
 
     # store
     table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gugun'])
-    table.to_csv('__results__/nene.csv', encoding="utf-8", mode='w', index=True)
+
+    table.to_csv('/root/crawling-results/nene.csv', encoding="utf-8", mode='w', index=True)
 
 
 def crawling_kyochon():
@@ -112,7 +115,7 @@ def crawling_goobne():
     url = 'http://www.goobne.co.kr/store/search_store.jsp'
 
     # 첫 페이지 로딩
-    wd = webdriver.Chrome('D:\cafe24\chrome_driver/chromedriver.exe')
+    wd = webdriver.Chrome('/cafe24/chrome_driver/chromedriver.exe')
     wd.get(url)
     time.sleep(3)
 
